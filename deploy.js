@@ -25,7 +25,7 @@ const deploy = async() => {
 	// ABI comes in as JSON, need to create a JS object
 	// let's deploy -- use data, args, etc
 	const result = await new web3.eth.Contract(JSON.parse(interface))
-		.deploy({ data: bytecode, arguments: ['Hit the reptile bud']})
+		.deploy({ data: bytecode, arguments: ['Hi the reptile bud']})
 		.send({gas: '1000000', from: accounts[0]});
 
 
@@ -35,3 +35,4 @@ const deploy = async() => {
 };
 
 deploy(); 
+
